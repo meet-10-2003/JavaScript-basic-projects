@@ -1,0 +1,140 @@
+*,*::before,*::after{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #3a3a3a;
+    color: #f1f5f9;
+}
+
+nav{
+    background-color: #f1f5f9;
+    color: #3a3a3a;
+}
+
+.nav-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.logo{
+    height: 40px;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #1a1a1a;
+    transition: all 0.35s ease-in-out;
+}
+
+.nav-toggle:hover{
+    color: rgb(0, 0, 186);
+    transform: rotate(90deg);
+}
+
+.links{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    list-style-type: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out;
+    height: 0px;
+}
+
+.links li{
+    margin-bottom: 20px;
+}
+
+.links a{
+    display: block;
+    font-weight: 800;
+    padding: 0.5rem;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: rgb(0, 0, 186);
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.links a:hover{
+    color: #767575;
+}
+
+.social-icons{
+    display: none;
+}
+
+.open-links{
+    height: 255px;
+}
+
+@media screen and (min-width:799px){
+    .nav-toggle{
+        display: none;
+    }
+    .nav-center{
+        max-width: 1170px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        padding: 0 .2rem 0 .2rem;
+        justify-content: space-between;
+    }
+    .links{
+        height: auto;
+        overflow: auto;
+        display: flex;
+        gap: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+        flex: 1;
+        justify-content: center;
+    }
+    .links li{
+        margin-bottom: 0px;
+    }
+    .links a{
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+    .social-icons{
+        display: flex;
+        list-style-type: none;
+        align-items: center;
+        gap: 10px;
+    }
+    .social-icons a{
+        transition: color 0.35s linear;
+    }
+    .social-icons a:hover{
+        color: #767575;
+    }
+}
+
+@media screen and (min-width:930px){
+    .nav-center{
+        padding: 0 1rem 0 1rem;
+    }
+    .links{
+        gap: 30px;
+    }
+    .social-icons{
+        gap: 20px;
+    }
+}
+
